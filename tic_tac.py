@@ -21,11 +21,22 @@ marks in a rows:
 {sep * 40}
 """)
 
+def board():
+    """Shows a baord for the game"""
+    square = [""] * 9 #list of squares for placing stones
+    return print(f"""
+        +---+---+---+
+        |{square[0] :^3}|{square[1] :^3}|{square[2] :^3}|
+        +---+---+---+
+        |{square[3] :^3}|{square[4] :^3}|{square[5] :^3}|   
+        +---+---+---+         
+        |{square[6] :^3}|{square[7] :^3}|{square[8] :^3}| 
+        +---+---+---+  
+          """)
 
 
 
 
-#TODO grid function
 #TODO players
 #TODO placing stones
 #TODO conditions for properly placing stones
@@ -39,3 +50,4 @@ marks in a rows:
 
 #-----------Game----------
 welcome()
+board()
