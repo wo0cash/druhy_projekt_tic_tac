@@ -4,6 +4,7 @@ author: Lukasz Orszulik
 email: luki93@seznam.cz
 discord: discord: Lukasz Orszulik, wo0cash
 """
+
 def welcome():
     """Welcome user and shows basic rules"""
     sep = "="
@@ -18,20 +19,19 @@ marks in a rows:
                         * horizontal
                         * vertical
                         * diagonal
-{sep * 40}
-""")
+{sep * 40}""")
 
 def board():
     """Shows a baord for the game"""
     square = [""] * 9 #list of squares for placing stones
     return print(f"""
-        +---+---+---+
-        |{square[0] :^3}|{square[1] :^3}|{square[2] :^3}|
-        +---+---+---+
-        |{square[3] :^3}|{square[4] :^3}|{square[5] :^3}|   
-        +---+---+---+         
-        |{square[6] :^3}|{square[7] :^3}|{square[8] :^3}| 
-        +---+---+---+  
+            +---+---+---+
+            |{square[0] :^3}|{square[1] :^3}|{square[2] :^3}|
+            +---+---+---+
+            |{square[3] :^3}|{square[4] :^3}|{square[5] :^3}|   
+            +---+---+---+         
+            |{square[6] :^3}|{square[7] :^3}|{square[8] :^3}| 
+            +---+---+---+  
           """)
 
 
