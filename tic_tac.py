@@ -24,4 +24,18 @@ marks in a rows:
 
 
 
+
+#TODO grid function
+#TODO players
+#TODO placing stones
+#TODO conditions for properly placing stones
+#TODO cond. for only digits
+#TODO cond. for placing stone over already used space
+#TODO show updated grid
+#TODO if there are 3 stones in a row ther is a winner
+#TODO if ther is no space and no 3 stones in a row then end of game
+
+
+
+#-----------Game----------
 welcome()
