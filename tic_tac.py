@@ -32,7 +32,7 @@ def board():
             |{square[6] :^3}|{square[7] :^3}|{square[8] :^3}| 
             +---+---+---+  
           """)
-def player(move_x):
+def ch_player(move_x):
     """Chooses player"""
     if move_x % 2 == 1:
         return "o"
@@ -41,22 +41,25 @@ def player(move_x):
 
 def move(number):
     """Places a number on board(in a square list)"""
-    if not number.isdigit() and 0 > number < 9:
+    if not number.isdigit() and 0 > number < 10:
         return print("You must type only digits between 1-9!")
-    elif square[number] != "":
+    elif square[int(number)] != "":
         return print("This square is taken!")
     else:
-        return square[number]
+        return number
 
 def round():
-
+    """Places stones on board"""
+    move_count = 1
+    while move_count <= 9:
+        player = ch_player(move_count)
+        print(f"Player {player}") 
+        square[int(move(input("Type a number from 1-9: ")))-1] = player #move
+        print(square)
+        move_count += 1
+    print("End game")
 
     
-
-square = [""] * 9 #list of squares for placing stones
-move_count = 1
-
-
 
 
 
@@ -69,15 +72,16 @@ move_count = 1
 #TODO if there are 3 stones in a row ther is a winner
 #TODO if ther is no space and no 3 stones in a row then end of game
 
-
-
 #-----------Game----------
+square = [""] * 9 #list of squares for placing stones
+
 welcome()
 board()
 print("Let's start the game!")
+round()
 
 #-----------Round---------
-#TODO players
-move(input("Type a number from 1-9: ")) #move
+
+
 
 print(square)
