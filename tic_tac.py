@@ -1,10 +1,4 @@
-"""
-tic_tac.py: druhý projekt do Engeto Online Python Akademie
-author: Lukasz Orszulik 
-email: luki93@seznam.cz
-discord: discord: Lukasz Orszulik, wo0cash
-"""
-
+#Simple game
 def welcome():
     """Welcome user and shows basic rules"""
     sep = "="
@@ -15,10 +9,7 @@ GAME RULES:
 Each player can place one mark or stone
 per turn on the 3x3 grid. The WINNER is
 who succeeds in placing three of their
-marks in a rows:
-                        * horizontal
-                        * vertical
-                        * diagonal
+marks in a horizontal, vertical and diagonal rows
 {sep * 40}""")
 
 def board():
